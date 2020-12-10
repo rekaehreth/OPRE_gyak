@@ -37,7 +37,8 @@ int main()
     // Everything written here will be done 8 times (2^(number of forks))
     fork();
     fork();
-    // when the parent is 1, the process' parent has already finished, so a new parent has to be choosen (1 - init process)
+    // when the parent is 1, it's a zombie process 
+        // the process' parent has already finished, so a new parent has to be choosen (1 - init process)
     // even the prompt can finish before its children finished 
     // as a result, the prompt will come back, but the children will continue writing things to the output
         // parent has to wait for all of its children processes to finish, before it can finish running
